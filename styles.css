@@ -1,0 +1,272 @@
+/* Global styles and layout */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header with logo and navigation */
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: none; /* Hidden by default for mobile */
+    margin: 0;
+    padding: 0;
+}
+
+nav .nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav .nav-links a:hover {
+    color: #ffcc00; /* Hover effect on nav links */
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Landing / Welcome Section */
+.welcome-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.welcome-section h1 {
+    font-size: 2em;
+}
+
+.welcome-section .welcome-images {
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.welcome-section .welcome-images img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+.cta-button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #005bb5; /* Hover effect on button */
+}
+
+/* About Section */
+.about-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-section h2 {
+    margin-bottom: 15px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-image img {
+    width: 150px;
+    border-radius: 8px;
+}
+
+.about-text {
+    max-width: 600px;
+    margin-top: 10px;
+}
+
+/* Features Section with list */
+.features-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.features-section h2 {
+    text-align: center;
+}
+
+.features-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features-section li {
+    margin: 5px 0;
+}
+
+.features-section input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Gallery / Carousel Section */
+.gallery-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    max-width: 400px;
+    margin: auto;
+}
+
+.carousel .slides img {
+    width: 100%;
+    display: none; /* Hide all slides initially */
+}
+
+.carousel .prev, .carousel .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 8px;
+    margin-top: -22px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    border-radius: 50%;
+}
+
+.carousel .prev {
+    left: 0;
+}
+
+.carousel .next {
+    right: 0;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.contact-section h2 {
+    text-align: center;
+}
+
+.map iframe {
+    border: 0;
+    width: 100%;
+    height: 300px;
+}
+
+.contact-form {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form label {
+    margin: 5px 0 2px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #005bb5;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #ddd;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Media Queries */
+
+/* Tablet View */
+@media (min-width: 600px) {
+    nav .nav-links {
+        display: block;
+    }
+    .menu-button {
+        display: none;
+    }
+    .about-content {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .about-text {
+        margin-left: 20px;
+        margin-top: 0;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 900px) {
+    .welcome-section .welcome-images {
+        justify-content: space-around;
+    }
+    .features-section ul {
+        columns: 2; /* Two columns list on larger screens */
+    }
+}
